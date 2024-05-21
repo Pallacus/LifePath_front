@@ -20,8 +20,8 @@ export class DataService {
 
     private httpClient = inject(HttpClient);
 
+    private baseUrl = 'https://lifepath-back.onrender.com/api';
 
-    private baseUrl = 'http://localhost:3000/api';
 
     getFullName() {
         return firstValueFrom(this.httpClient.get<String>(`${this.baseUrl}/fullName`));
