@@ -1,0 +1,236 @@
+/***   CONSOLE   ***/
+
+.console {
+
+    position: sticky;
+    top: 0;
+
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    min-width: 480px;
+    margin: 0 auto;
+    background-color: var(--back_color);
+
+}
+
+.lightBulb {
+
+    height: 40px;
+    width: auto;
+    padding-left: 2rem;
+    filter: drop-shadow(0 0 2px var(--main_color));
+
+    &.dark {
+
+        filter: invert(100%) drop-shadow(0 0 2px var(--main_color));
+
+    }
+
+}
+
+nav {
+
+    padding-right: 2rem;
+
+}
+
+.languageSelector {
+
+    display: flex;
+
+    & .worldIcon {
+
+        height: 40px;
+        width: auto;
+        padding: 0.2rem;
+        filter: drop-shadow(0 0 1px var(--main_color));
+
+        &.dark {
+
+            filter: invert(100%) drop-shadow(0 0 1px var(--main_color));
+
+        }
+
+    }
+
+    & .lang_btn {
+
+        opacity: 0;
+
+        height: 2.5rem;
+        width: 2rem;
+        font-size: 1.2rem;
+        margin: 0 0.25rem;
+        padding: 0 0.25rem 0.25rem 0.25rem;
+        display: grid;
+        place-items: center;
+
+
+        & a {
+
+            text-shadow: 0 0 1px var(--main_color);
+            font-weight: 500;
+
+        }
+
+    }
+
+    &:hover {
+
+        & .lang_btn {
+
+            opacity: 1;
+
+        }
+
+    }
+
+}
+
+
+/***   BODY   ***/
+
+.hide {
+
+    display: none;
+
+}
+
+.container {
+
+    min-height: 100vh;
+    background-color: var(--back_color);
+    max-width: 1200px;
+    min-width: 480px;
+    margin: 0 auto;
+
+    &.padding {
+
+        padding-bottom: 6rem;
+
+    }
+
+}
+
+.data {
+
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.sectionTitle {
+
+    padding: 1.5rem 0 0 3.5rem;
+    font-weight: 300;
+
+}
+
+.card {
+
+    padding: 1rem 2rem;
+    margin: 2rem 3rem;
+    border-radius: 1rem;
+
+    background: var(--back_color);
+    box-shadow: 05px 10px 15px #e3e3e3,
+        -10px -10px 15px #ffffff;
+
+    &.dark {
+
+        box-shadow: 05px 10px 15px #161616,
+            -10px -10px 15px #2e2e2e;
+
+    }
+
+    & .cardContent {
+
+        & .grid {
+
+            display: grid;
+            grid-template-columns: 7.5rem auto;
+
+            & p {
+
+                margin: 0.4rem 0;
+
+                & a {
+
+                    text-decoration: none;
+
+                    color: var(--main_color);
+
+                }
+
+            }
+
+        }
+
+        & h4 {
+
+            margin: 0.4rem 0;
+
+        }
+
+    }
+
+    .flex {
+
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+}
+
+.git {
+
+    transition: 0.2s;
+}
+
+.email {
+
+    color: var(--main_color);
+}
+
+.logoRow {
+
+    display: flex;
+    justify-content: space-around;
+    max-width: 650px;
+    margin: 2.5rem auto 1rem auto;
+    flex-wrap: wrap;
+
+    & logo,
+    img {
+
+        height: 3rem;
+        width: auto;
+        margin: 0 0.25rem;
+
+    }
+
+}
+
+.express_logo {
+
+    filter: invert(100%);
+
+    &.dark {
+
+        filter: invert(0);
+
+    }
+
+}
+
+.projectName a {
+
+    transition: 0.2s;
+    color: var(--main_color);
+
+}

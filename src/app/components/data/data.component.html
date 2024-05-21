@@ -1,0 +1,146 @@
+<div class="container" [class.padding]="!hidePersonal">
+
+    <div class="console">
+        <div class="lightSwitch">
+            <img class="lightBulb" [class.dark]="utilityService.darkMode" src="../../../assets/images/light_bulb.png"
+                (click)="utilityService.toggleDarkMode()" alt="turn me on">
+        </div>
+        <nav>
+            <div class="languageSelector">
+                <div class="lang_btn"><a (click)="setLanguage('ca')">ca</a></div>
+                <div class="lang_btn"><a (click)="setLanguage('cas')">cas</a></div>
+                <div class="lang_btn"><a (click)="setLanguage('en')">en</a></div>
+                <img class="worldIcon" [class.dark]="utilityService.darkMode" src="../../../assets/images/world.png"
+                    alt="language selector">
+            </div>
+        </nav>
+    </div>
+
+    <div class="content">
+
+        <div class="data">
+            <div class="head " [class.dark]="utilityService.darkMode">
+                <h1 (click)="[hidePersonal=false]">{{fullName}}</h1>
+            </div>
+        </div>
+
+        <div class="personal">
+            <div class="card" [class.dark]="utilityService.darkMode" [class.hide]="hidePersonal">
+                <div class="cardContent">
+                    <div class="grid">
+                        <h4>email: </h4>
+                        <a class="email" href="mailto:{{this.personalData.email}}"
+                            target="_blank">{{this.personalData.email}}</a>
+                        <h4>git: </h4>
+                        <p><a class="git" href="{{personalData.git}}" target="_blank">{{personalData.git}}</a></p>
+                        <h4>phone: </h4>
+                        <p>{{personalData.phone_number}}</p>
+                        <h4>location: </h4>
+                        <p>{{personalData.city}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="sectionTitle" [class.hide]="hidePersonal" (click)="[hideLastTraining=false]">{{lastTrainingTitle}}
+        </h2>
+        <div class="lastTraining">
+            <div class="card" [class.dark]="utilityService.darkMode" [class.hide]="hideLastTraining">
+                <div class="cardContent">
+                    <div class="flex">
+                        <h2 class="academy">{{lastTraining.academy}}</h2>
+                        <p class="date">{{lastTraining.date}}</p>
+                    </div>
+                    <h3 class="title">{{lastTraining.title}}</h3>
+                    <p class="description">{{lastTraining.description}}</p>
+                    <div class="logoBar">
+                        <div class="logoRow">
+                            <div class="logo"><img src="../../../assets/images/logo_javascript.png" alt=""></div>
+                            <div class="logo"><img src="../../../assets/images/logo_angular.png" alt=""></div>
+                            <div class="logo"><img src="../../../assets/images/logo_typescript.png" alt=""></div>
+                            <div class="logo"><img src="../../../assets/images/logo_node.png" alt=""></div>
+                            <div class="logo"><img class="express_logo" [class.dark]="!utilityService.darkMode"
+                                    src="../../../assets/images/logo-express.png" alt=""></div>
+                            <div class="logo"><img src="../../../assets/images/logo_mysql.png" alt=""></div>
+                            <div class="logo"><img src="../../../assets/images/logo_mogodb.png" alt=""></div>
+                            <div class="logo"><img src="../../../assets/images/logo_react.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="sectionTitle" [class.hide]="hideLastTraining" (click)="[hideFeaturedProjects=false]">
+            {{featuredProjectsTitle}}
+        </h2>
+        <div class="featuredProjects" [class.hide]="hideFeaturedProjects">
+            @for (project of featuredProjects; track project._id) {
+            <div class="project">
+                <div class="card" [class.dark]="utilityService.darkMode">
+                    <div class="cardContent">
+                        <div>
+                            <h2 class="projectName"><a href="{{project.link}}" target="_blank"
+                                    class="link">{{project.name}}</a></h2>
+                            <p class="description">{{project.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+
+        <h2 class="sectionTitle" [class.hide]="hideFeaturedProjects" (click)="[hideCompetences=false]">
+            {{competencesTitle}}
+        </h2>
+        <div class="competences" [class.hide]="hideCompetences">
+            @for (competence of competences; track competence._id) {
+            <div class="competence">
+                <div class="card" [class.dark]="utilityService.darkMode">
+                    <div class="cardContent">
+                        <div>
+                            <h2 class="academy">{{competence.title}}</h2>
+                            <p class="description">{{competence.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+
+        <h2 class="sectionTitle" [class.hide]="hideCompetences" (click)="[hideElse=false]">{{trainingTitle}}</h2>
+        <div class="training" [class.hide]="hideElse">
+            @for (training of trainings; track training._id) {
+            <div class="training">
+                <div class="card" [class.dark]="utilityService.darkMode">
+                    <div class="cardContent">
+                        <div class="flex">
+                            <h2 class="academy">{{training.academy}}</h2>
+                            <p class="date">{{training.date}}</p>
+                        </div>
+                        <h3 class="title">{{training.title}}</h3>
+                        <p class="description">{{training.description}}</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+
+        <h2 class="sectionTitle" [class.hide]="hideElse">{{experienceTitle}}</h2>
+        <div class="experinece" [class.hide]="hideElse">
+            @for (experience of experiences; track experience._id) {
+            <div class="experinece">
+                <div class="card" [class.dark]="utilityService.darkMode">
+                    <div class="cardContent">
+                        <div class="flex">
+                            <h2 class="academy">{{experience.company}}</h2>
+                            <p class="date">{{experience.date_from}} - {{experience.date_to}}</p>
+                        </div>
+                        <h3 class="title">{{experience.position}}</h3>
+                        <p class="description">{{experience.description}}</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
