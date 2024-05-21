@@ -42,7 +42,7 @@ nav {
 
     & .worldIcon {
 
-        height: 40px;
+        height: 2.5rem;
         width: auto;
         padding: 0.2rem;
         filter: drop-shadow(0 0 1px var(--main_color));
@@ -117,9 +117,14 @@ nav {
 .data {
 
     position: sticky;
-    top: 0;
+    top: 65px;
     display: flex;
     justify-content: center;
+    background: var(--back_color);
+
+    & h1 {
+        padding-bottom: 1rem;
+    }
 
 }
 
