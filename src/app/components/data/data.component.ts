@@ -28,6 +28,8 @@ export class DataComponent {
 
   lastTrainingTitle: string = "Formación en programación";
   featuredProjectsTitle: string = "Proyectos destacados";
+  frontLinkTitle: string = "Repositorio del front";
+  backLinkTitle: string = "Repositorio del back";
   competencesTitle: string = "Competencias";
   trainingTitle: string = "Formación";
   experienceTitle: string = "Experiencia";
@@ -95,6 +97,8 @@ export class DataComponent {
 
       this.lastTrainingTitle = "Formació en programació";
       this.featuredProjectsTitle = "Projectes destacats";
+      this.frontLinkTitle = "Repositori del front";
+      this.backLinkTitle = "Repositori del back";
       this.competencesTitle = "Competències";
       this.trainingTitle = "Formació";
       this.experienceTitle = "Experiència";
@@ -105,6 +109,8 @@ export class DataComponent {
 
       this.lastTrainingTitle = "Formación en programación";
       this.featuredProjectsTitle = "Proyectos destacados";
+      this.frontLinkTitle = "Repositorio del front";
+      this.backLinkTitle = "Repositorio del back";
       this.competencesTitle = "Competencias";
       this.trainingTitle = "Formación";
       this.experienceTitle = "Experiencia";
@@ -115,6 +121,8 @@ export class DataComponent {
 
       this.lastTrainingTitle = "Developer training";
       this.featuredProjectsTitle = "Featured projects";
+      this.frontLinkTitle = "Front repository";
+      this.backLinkTitle = "Back repository";
       this.competencesTitle = "Competencies";
       this.trainingTitle = "Training";
       this.experienceTitle = "Experience";

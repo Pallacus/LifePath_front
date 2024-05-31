@@ -77,9 +77,20 @@
                 <div class="card" [class.dark]="utilityService.darkMode">
                     <div class="cardContent">
                         <div>
+                            @if(project.link){
                             <h2 class="projectName"><a href="{{project.link}}" target="_blank"
                                     class="link">{{project.name}}</a></h2>
+                            }@else{
+                            <h2 class="projectName">{{project.name}}</h2>
+                            }
                             <p class="description">{{project.description}}</p>
+                            @if(project.front_link){
+                            <h5><a href="{{project.front_link}}" target="_blank" class="link">{{frontLinkTitle}}</a>
+                            </h5>
+                            }
+                            @if(project.back_link){
+                            <h5><a href="{{project.back_link}}" target="_blank" class="link">{{backLinkTitle}}</a></h5>
+                            }
                         </div>
                     </div>
                 </div>

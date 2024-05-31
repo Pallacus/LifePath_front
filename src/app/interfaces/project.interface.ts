@@ -4,7 +4,8 @@ export interface Project {
     language: String,
     date: Date,
     name: string;
-    description: string;
     link: string;
+    front_link: string;
+    back_link: string;
+    description: string;
 }
-
